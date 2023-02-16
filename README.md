@@ -73,3 +73,10 @@ sysbench \
 cleanup
 
 In this example we clean up the environment that was created, freeing up the space used for testing.
+
+## To user help of sysbench
+
+docker run \
+--rm=true \
+--name=sb-cleanup \
+marcosvile/sysbench \
