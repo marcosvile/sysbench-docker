@@ -5,9 +5,9 @@ Sysbench 1.0.20-r1 in Docker environment for performance and stress test in mysq
 ### Requirement
 Create a MySQL database and user for sysbench:
 
-mysql> CREATE SCHEMA sbtest;
-mysql> CREATE USER sbtest@'%' IDENTIFIED BY 'password';
-mysql> GRANT ALL PRIVILEGES ON sbtest.* to sbtest@'%';
+mysql> CREATE SCHEMA sbtest;\
+mysql> CREATE USER sbtest@'%' IDENTIFIED BY 'password';\
+mysql> GRANT ALL PRIVILEGES ON sbtest.* to sbtest@'%';\
 Or simply use the respective MySQL's image environment variables to create the database and user when running the MySQL container.
 
 ## Docker
