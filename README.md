@@ -78,5 +78,5 @@ In this example we clean up the environment that was created, freeing up the spa
 
 docker run \
 --rm=true \
---name=sb-cleanup \
-marcosvile/sysbench \
+--name=sb-help \
+marcosvile/sysbench
