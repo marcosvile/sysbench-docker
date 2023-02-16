@@ -18,12 +18,13 @@ docker run \
 --rm=true \
 --name=sb-prepare \
 marcosvile/sysbench \
-sysbench \
+--report-interval=1 \
 --tables=10 \
 --table-size=1000000 \
+--db-driver=mysql \
 --mysql-host=dbhostname \
 --mysql-port=3306 \
---mysql-user=dbuser  \
+--mysql-user=dbuser \
 --mysql-password='password' \
 --mysql-db=database \
 /usr/share/sysbench/oltp_read_only.lua \
@@ -36,7 +37,6 @@ docker run \
 --rm=true \
 --name=sb-teste \
 marcosvile/sysbench \
-sysbench \
 --report-interval=1 \
 --tables=10 \
 --table-size=1000000 \
@@ -61,7 +61,6 @@ docker run \
 --rm=true \
 --name=sb-cleanup \
 marcosvile/sysbench \
-sysbench \
 --tables=10 \
 --table-size=1000000 \
 --mysql-host=dbhostname \
