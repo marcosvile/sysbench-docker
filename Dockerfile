@@ -1,10 +1,8 @@
-FROM alpine:latest
+FROM debian
 
-RUN apk update && apk upgrade && apk add --no-cache ca-certificates
+RUN apt-get update 
 
-ARG version="1.0.20-r0"
-
-RUN apk add mysql-client sysbench=$version && rm -rf /var/cache/apk/*
+RUN apt-get install sysbench -y
 
 ENTRYPOINT [ "sysbench" ]
 CMD [ "--help" ]
